@@ -25,7 +25,6 @@ function AppContent() {
         styles.container,
         {
           paddingTop: safeAreaInsets.top,
-          paddingBottom: safeAreaInsets.bottom,
         },
       ]}
     >

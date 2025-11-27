@@ -12,6 +12,7 @@ const TopFilterBar: React.FC = () => {
     <View style={styles.container}>
       <TextInput
         placeholder="Search for any movie..."
+        placeholderTextColor={'gray'}
         style={styles.textedit}
         onChangeText={text => {
           setText(text);

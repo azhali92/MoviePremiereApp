@@ -27,7 +27,6 @@ const MainTabs = createBottomTabNavigator({
     },
     tabBarActiveTintColor: 'black',
     tabBarInactiveTintColor: '#bfbfbf',
-    tabBarStyle: { height: 55 },
     headerShown: false,
   }),
   screens: {
