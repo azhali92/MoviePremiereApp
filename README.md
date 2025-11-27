@@ -1,98 +1,81 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# MyTheres Movie Premiere App 🎥
 
-# Getting Started
+This App is created by **Azhar Ali** for MyTheresa's internal evaluation
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+### Quick Glance on Main Features :
 
-## Step 1: Start Metro
+- List to Show Most Popular Movies
+- **Search bar** to search for movies from the list based on **title**
+- View more details of each movie via Movie Detail Screen
+- Ability to add movies to Watchlist which can be accessed from the **bottom tab**
+- The movies added to Watchlist are **fully persisted across consecutive app launches**
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+<br/>
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+#### Details on Framework, Libraries etc. used
 
-```sh
-# Using npm
-npm start
+- **Language**: Typescript
+- **React Native Version**: 0.82.1
+- **Node**: v25.2.1
+- **npm**: 10.5.2
+- **State Management and Persistance**: Zustand 5.0.8
+- **Icons**: Font Awesome 6
+- **Navigation Library**: React Navigation v7
+- **Optimized Flatlist**: Flashlist 2.2.0
+- **Android Compile SDK**: 36
 
-# OR using Yarn
-yarn start
+## How to build and run the project on Windows OS on Android Emulator
+
+Pre-requisite : Please ensure you have the following installed.
+
+- Node
+- npm
+- JDK 17
+- Android Studio. You'll also need to setup an emulator to run the build. See here for a guide :
+
+Once you have the above installed and setup, the proceed with the following : https://developer.android.com/studio/run/emulator#avd
+
+- Clone the repo locally
+- The project relies on a `.env` file with the following content. Create it at the root of the project. ⚠️ Your project won't work without this! :
+
+```markdown
+API_BASEURL="https://api.themoviedb.org/3"
+IMAGE_BASEURL="https://image.tmdb.org/t/p"
+API_KEY="abcd"
 ```
 
-## Step 2: Build and run your app
+1. API_BASEURL is the baseUrl of the TMDB API service
+2. IMAGE_BASEURL is the baseUrl of the TMDB Image CDN which we user
+3. API_KEY is your TMDB API Key for accessing their APIs
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
+- cd into the root of the project via a terminal and run the following :
+  `npm i`
+- Assuming you have setup an emulator, run the following to build your App and run on the emulator : `npm run android`
 
-### Android
+## Brief description of the main features of the App
 
-```sh
-# Using npm
-npm run android
+#### Home Screen :
 
-# OR using Yarn
-yarn android
-```
+- This screen contains a ScrollView as the main container. There is a horizontal list for showing "Popular Movies"
+- The horizonal list supports **pagination**. When user is about to reach the end of the list, the next set of data is fetched and appended to the list, thus giving a seamless experience to the user
+- At the top of the screen, there is a simple search bar. It allows to seach based on title of the movie
+  ![alt text](https://i.postimg.cc/7YnNSVC4/Screenshot-2025-11-28-005039.png)
+  <br><br>
 
-### iOS
+#### Movie Detail Screen :
 
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
+- This screen shows the main banner along with important data like release date, genres and synopsis
+- There is a button to Add the movie to user watchlist. If a specific movie is already in the watchlist, the button changes 'Remove from Watchlist'
+  ![alt text](https://i.postimg.cc/65fhC07T/Screenshot-2025-11-28-005307.png)
+  <br>
 
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
+#### Watchlist :
 
-```sh
-bundle install
-```
+- All the movies added to watchlist is seen here in a neat vertical list. User can see thumbnail and title
+- There is a button to remove from watchlist
+- This list is **persisted across launches**
+  ![alt text](https://i.postimg.cc/gkHK3DwJ/Screenshot-2025-11-28-005217.png)
 
-Then, and every time you update your native dependencies, run:
-
-```sh
-bundle exec pod install
-```
-
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
-
-```sh
-# Using npm
-npm run ios
-
-# OR using Yarn
-yarn ios
-```
-
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
-
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
-
-## Step 3: Modify your app
-
-Now that you have successfully run the app, let's make changes!
-
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
-
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
-
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
-"# MoviePremiereApp" 
+<br>
+<br>
+<br>
