@@ -31,9 +31,9 @@ Pre-requisite : Please ensure you have the following installed.
 - Node
 - npm
 - JDK 17
-- Android Studio. You'll also need to setup an emulator to run the build. See here for a guide :
+- Android Studio. You'll also need to setup an emulator to run the build. See here for a guide : https://developer.android.com/studio/run/emulator#avd
 
-Once you have the above installed and setup, the proceed with the following : https://developer.android.com/studio/run/emulator#avd
+Once you have the above installed and setup, the proceed with the following :
 
 - Clone the repo locally
 - The project relies on a `.env` file with the following content. Create it at the root of the project. ⚠️ Your project won't work without this! :
