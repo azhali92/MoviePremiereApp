@@ -59,13 +59,16 @@ API_KEY="abcd"
 - This screen contains a ScrollView as the main container. There is a horizontal list for showing "Popular Movies"
 - The horizonal list supports **pagination**. When user is about to reach the end of the list, the next set of data is fetched and appended to the list, thus giving a seamless experience to the user
 - At the top of the screen, there is a simple search bar. It allows to seach based on title of the movie
+
   ![alt text](https://i.postimg.cc/7YnNSVC4/Screenshot-2025-11-28-005039.png)
+
   <br><br>
 
 #### Movie Detail Screen :
 
 - This screen shows the main banner along with important data like release date, genres and synopsis
 - There is a button to Add the movie to user watchlist. If a specific movie is already in the watchlist, the button changes 'Remove from Watchlist'
+
   ![alt text](https://i.postimg.cc/65fhC07T/Screenshot-2025-11-28-005307.png)
   <br>
 
@@ -74,6 +77,7 @@ API_KEY="abcd"
 - All the movies added to watchlist is seen here in a neat vertical list. User can see thumbnail and title
 - There is a button to remove from watchlist
 - This list is **persisted across launches**
+
   ![alt text](https://i.postimg.cc/gkHK3DwJ/Screenshot-2025-11-28-005217.png)
 
 <br>
